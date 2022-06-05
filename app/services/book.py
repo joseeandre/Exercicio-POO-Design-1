@@ -54,6 +54,7 @@ class BookService(ABCBookService):
 
     def delete_book(self, book_id: int):
         self.dal.delete_book(book_id)
+        return "Excluido com sucesso"
     
     def update_book(self, book: BookUpdate, book_id: int) -> Book:
         current_book = self.dal.get_book_by_id(book_id)
